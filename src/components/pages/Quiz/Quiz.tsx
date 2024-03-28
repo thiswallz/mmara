@@ -9,9 +9,9 @@ import { Quiz as QuizType } from '~/types/Quiz'
 import styles from './Quiz.module.scss'
 
 const pageMotion = {
-  initial: { opacity: 0, x: 10 },
+  initial: { opacity: 0, x: 100 },
   animate: { opacity: 1, x: 0, transition: { duration: 0.5 } },
-  exit: { opacity: 0, x: -10, transition: { duration: 0.5 } },
+  exit: { opacity: 0, x: -100, transition: { duration: 0.5 } },
 }
 
 const Quiz = () => {
