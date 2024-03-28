@@ -1,4 +1,5 @@
 import React, { ButtonHTMLAttributes } from 'react'
+import { motion } from 'framer-motion'
 import styles from './Option.module.scss'
 
 interface OptionProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -13,19 +14,18 @@ const Option: React.FC<OptionProps> = ({
   ariaLabel,
   onClick,
   active,
-  ...restProps
 }) => {
   return (
-    <button
-      role="listitem"
+    <motion.button
       type="button"
       className={`${styles.option} ${active ? styles.active : ''}`}
       aria-label={ariaLabel}
       onClick={onClick}
-      {...restProps}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
     >
       {children}
-    </button>
+    </motion.button>
   )
 }
 

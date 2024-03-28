@@ -1,13 +1,20 @@
+import { useEffect } from 'react'
 import { useQuizContext } from '~/providers/QuizContext'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import styles from './Final.module.scss'
 import { Button } from '~/components/atoms/Button'
-import { useEffect } from 'react'
+import styles from './Final.module.scss'
 
 const pageMotion = {
   initial: { opacity: 0, scale: 0.5 },
   animate: { opacity: 1, scale: 1 },
+  exit: { opacity: 0 },
+}
+
+const containerPageMotion = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0, transition: { duration: 0.5 } },
 }
 
 function Final() {
@@ -39,7 +46,15 @@ function Final() {
 
   return (
     <>
-      <div className={styles.container}>
+      <motion.section
+        animate="animate"
+        exit="exit"
+        className={styles.container}
+        variants={containerPageMotion}
+        transition={{
+          duration: 0.2,
+        }}
+      >
         <motion.section
           initial="initial"
           animate="animate"
@@ -48,7 +63,6 @@ function Final() {
           className={styles.final}
           transition={{
             duration: 0.8,
-            delay: 0.5,
             ease: [0, 0.71, 0.2, 1.01],
           }}
         >
@@ -64,7 +78,7 @@ function Final() {
             </Button>
           </div>
         </motion.section>
-      </div>
+      </motion.section>
     </>
   )
 }
