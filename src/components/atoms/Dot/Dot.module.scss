@@ -1,0 +1,21 @@
+@import '~/styles/base/colors';
+@import '~/styles/base/breakpoints';
+
+.dot {
+  height: 18px;
+  width: 18px;
+  border-radius: 100%;
+  background-color: transparent;
+  border: 1px solid $brown-300;
+}
+
+.active {
+  background-color: $white;
+}
+
+@media screen and (min-width: map-get($breakpoints, 'md')) {
+  .dot {
+    height: 26px;
+    width: 26px;
+  }
+}

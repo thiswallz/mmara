@@ -1,0 +1,16 @@
+@import '~/styles/base/breakpoints';
+
+.options {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 300px;
+}
+
+@media screen and (min-width: map-get($breakpoints, 'md')) {
+  .options {
+    width: 350px;
+    gap: 1.5em;
+  }
+}

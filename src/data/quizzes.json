@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "question": "What wordS best <br /> describe you?",
+        "options": [
+            "PLAYFUL & CREATIVE",
+            "Classic & Thoughtful",
+            "Glamorous & CONFIDENT"
+        ]
+    },
+    {
+        "id": 2,
+        "question": "What is your <br /> café order?",
+        "options": [
+            "MATCHA",
+            "ESPRESSO",
+            "TEA"
+        ]
+    },
+    {
+        "id": 3,
+        "question": "WHAT IS YOUR <br /> GO-TO STYLE?",
+        "options": [
+            "CASHMERE",
+            "Denim",
+            "Leather"
+        ]
+    },
+    {
+        "id": 4,
+        "question": "What is your favorite <br /> NYC neighborhood?",
+        "options": [
+            "Williamsburg",
+            "CHELSEA",
+            "SoHo"
+        ]
+    },
+    {
+        "id": 5,
+        "question": "What color palette <br /> BEST DESCRIBES YOUR STYLE?",
+        "options": [
+            "Bold & Bright",
+            "Black & White",
+            "Neutrals"
+        ]
+    }
+]

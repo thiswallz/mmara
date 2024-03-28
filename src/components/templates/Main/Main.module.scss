@@ -1,0 +1,8 @@
+@import '~/styles/base/colors';
+
+.main {
+  border: 2px solid $white;
+  width: 100%;
+  max-width: 768px;
+  min-height: 100%;
+}

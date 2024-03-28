@@ -1,0 +1,15 @@
+@import '~/styles/base/breakpoints';
+
+.title {
+  font-size: 1.3em;
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: center;
+}
+
+@media screen and (min-width: map-get($breakpoints, 'md')) {
+  .title {
+    font-size: 1.8em;
+  }
+}
