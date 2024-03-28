@@ -6,9 +6,8 @@ import { Button } from '~/components/atoms/Button'
 import { useEffect } from 'react'
 
 const pageMotion = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1, transition: { duration: 0.5 } },
-  exit: { opacity: 0, transition: { duration: 0.5 } },
+  initial: { opacity: 0, scale: 0.5 },
+  animate: { opacity: 1, scale: 1 },
 }
 
 function Final() {
@@ -47,6 +46,11 @@ function Final() {
           exit="exit"
           variants={pageMotion}
           className={styles.final}
+          transition={{
+            duration: 0.8,
+            delay: 0.5,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
         >
           <img className={styles.logo} src="/logo.png" alt="Logo Max Mara" />
           <p className={styles.title}>THANKS SO MUCH FOR PLAYING!</p>
